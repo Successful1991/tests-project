@@ -1,15 +1,9 @@
+
+import { strict as assert } from 'assert';
 import { capitalaze } from '../src/capitalaze.js'
 
-if (capitalaze('artem') !== 'Artem') {
-   throw new Error('Функция не работает!');
-}
-
-if (capitalaze('artem всегда прав!') !== 'Artem всегда прав!') {
-    throw new Error('Функция не работает!');
- }
-
- if (capitalaze('artem Всегда прав!') !== 'Artem всегда прав!') {
-    throw new Error('Функция не работает!');
- }
+assert.strictEqual(capitalaze('artem'), 'Artem');
+assert.strictEqual(capitalaze('artem всегда прав!'), 'Artem всегда прав!');
+assert.strictEqual(capitalaze('artem Всегда прав!'), 'Artem всегда прав!');
 
 console.log('Все тесты пройдены');
